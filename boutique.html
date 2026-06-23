@@ -26,14 +26,42 @@
       <li><a href="devis.html">Devis</a></li>
       <li><a href="index.html#contact" class="btn-nav">Contact</a></li>
     </ul>
+    <button class="cart-btn" id="cart-btn" aria-label="Panier">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="cart-count" id="cart-count" hidden>0</span>
+    </button>
   </nav>
 
-  <!-- HEADER -->
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>Mon panier</h2>
+      <button class="cart-close" id="cart-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- filled by JS -->
+    </div>
+    <div class="cart-footer" id="cart-footer" hidden>
+      <div class="cart-total">
+        <span>Total estimé</span>
+        <strong id="cart-total-price">0 €</strong>
+      </div>
+      <p class="cart-note">Prix indicatifs. Le prix final sera confirmé après validation de votre fichier / projet.</p>
+      <button class="btn-primary btn-full" id="checkout-btn">Passer commande →</button>
+    </div>
+  </aside>
+
+  <!-- PAGE HEADER -->
   <header class="page-header">
     <div class="container">
       <p class="hero-label">Boutique</p>
       <h1>Commandez en ligne</h1>
-      <p class="page-sub">Sélectionnez un produit ci-dessous. Le paiement est sécurisé via Stripe. Vous recevrez une confirmation par email après votre commande.</p>
+      <p class="page-sub">Ajoutez vos produits au panier. Le paiement est sécurisé via Stripe.</p>
     </div>
   </header>
 
@@ -52,16 +80,16 @@
 
   <!-- PRODUCTS -->
   <main class="container shop-main">
-
     <div class="products-grid" id="products-grid">
 
-      <div class="product-card" data-cat="cnc">
+      <div class="product-card" data-cat="cnc"
+           data-id="cnc-aluminium" data-name="Pièce CNC aluminium" data-price="35">
         <div class="product-img product-img-cnc">
           <span class="product-badge">CNC</span>
         </div>
         <div class="product-body">
           <h2>Pièce CNC aluminium sur mesure</h2>
-          <p>Fraisage ou tournage de précision en aluminium. Fournis votre fichier CAO ou nous concevons la pièce pour vous.</p>
+          <p>Fraisage ou tournage de précision. Fournis votre fichier CAO ou nous concevons la pièce.</p>
           <ul class="product-specs">
             <li>Matériau : Aluminium 2024 / 6061</li>
             <li>Tolérance : ±0.05 mm</li>
@@ -69,18 +97,19 @@
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>35 €</strong></div>
-            <a href="https://buy.stripe.com/6oU5kC396c2Rgcf6HN3oA00" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="3d">
+      <div class="product-card" data-cat="3d"
+           data-id="3d-fdm" data-name="Impression 3D FDM" data-price="15">
         <div class="product-img product-img-3d">
           <span class="product-badge">3D</span>
         </div>
         <div class="product-body">
           <h2>Impression 3D FDM sur mesure</h2>
-          <p>Prototypage ou pièce fonctionnelle en impression FDM. PLA, PETG, ASA, TPU disponibles.</p>
+          <p>Prototypage ou pièce fonctionnelle. PLA, PETG, ASA, TPU disponibles.</p>
           <ul class="product-specs">
             <li>Matériaux : PLA · PETG · ASA · TPU</li>
             <li>Résolution : 0.1 – 0.3 mm</li>
@@ -88,113 +117,119 @@
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>15 €</strong></div>
-            <a href="STRIPE_PAYMENT_LINK_3D_FDM" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="3d">
+      <div class="product-card" data-cat="3d"
+           data-id="3d-sls" data-name="Impression 3D SLS Sinterit" data-price="45">
         <div class="product-img product-img-sls">
           <span class="product-badge product-badge-pro">SLS Pro</span>
         </div>
         <div class="product-body">
           <h2>Impression 3D SLS Sinterit</h2>
-          <p>Pièces haute performance en nylon SLS. Idéal pour pièces mécaniques, connecteurs, pièces de voiture.</p>
+          <p>Pièces haute performance en nylon SLS. Idéal pour pièces mécaniques et pièces de voiture.</p>
           <ul class="product-specs">
             <li>Matériau : Nylon PA12 / Flexa</li>
-            <li>Résistance : haute température</li>
+            <li>Résistance haute température</li>
             <li>Délai : 5–10 jours ouvrés</li>
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>45 €</strong></div>
-            <a href="STRIPE_PAYMENT_LINK_SLS" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="laser">
+      <div class="product-card" data-cat="laser"
+           data-id="gravure-laser" data-name="Gravure laser" data-price="10">
         <div class="product-img product-img-laser">
           <span class="product-badge">Laser</span>
         </div>
         <div class="product-body">
           <h2>Gravure laser personnalisée</h2>
-          <p>Gravure sur bois, métal, plastique, cuir ou verre. Logo, texte, motif. Idéal cadeaux, plaques, trophées.</p>
+          <p>Gravure sur bois, métal, plastique, cuir ou verre. Logo, texte, motif.</p>
           <ul class="product-specs">
             <li>Supports : bois · métal · cuir · plastique</li>
-            <li>Quantité : unitaire ou série</li>
+            <li>Unitaire ou série</li>
             <li>Délai : 3–5 jours ouvrés</li>
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>10 €</strong></div>
-            <a href="STRIPE_PAYMENT_LINK_LASER" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="cadeau laser">
+      <div class="product-card" data-cat="cadeau laser"
+           data-id="plaque" data-name="Plaque nominative / signalétique" data-price="20">
         <div class="product-img product-img-plaque">
           <span class="product-badge">Personnalisé</span>
         </div>
         <div class="product-body">
           <h2>Plaque nominative / signalétique</h2>
-          <p>Plaque maison, bureau ou entreprise. Aluminium brossé, acrylique ou bois. Texte et logo personnalisés.</p>
+          <p>Plaque maison, bureau ou entreprise. Aluminium brossé, acrylique ou bois.</p>
           <ul class="product-specs">
-            <li>Matériaux : alu brossé · acrylique · bois</li>
-            <li>Format : sur mesure</li>
+            <li>Matériaux : alu · acrylique · bois</li>
+            <li>Format sur mesure</li>
             <li>Délai : 5–7 jours ouvrés</li>
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>20 €</strong></div>
-            <a href="STRIPE_PAYMENT_LINK_PLAQUE" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="cadeau laser">
+      <div class="product-card" data-cat="cadeau laser"
+           data-id="portecle" data-name="Porte-clés personnalisés" data-price="5">
         <div class="product-img product-img-portecle">
           <span class="product-badge">Cadeau</span>
         </div>
         <div class="product-body">
           <h2>Porte-clés personnalisés</h2>
-          <p>Porte-clés gravés au laser ou découpés CNC. Idéal pour cadeaux d'entreprise, événements, boutiques.</p>
+          <p>Gravés au laser ou découpés CNC. Idéal pour cadeaux d'entreprise et événements.</p>
           <ul class="product-specs">
             <li>Matériaux : alu · bois · acrylique</li>
-            <li>Quantité : à partir de 1 unité</li>
+            <li>À partir de 1 unité</li>
             <li>Délai : 3–5 jours ouvrés</li>
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>5 €</strong></div>
-            <a href="STRIPE_PAYMENT_LINK_PORTECLE" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="cnc 3d">
+      <div class="product-card" data-cat="cnc 3d"
+           data-id="repro" data-name="Reproduction de pièce" data-price="0">
         <div class="product-img product-img-repro">
           <span class="product-badge">Reproduction</span>
         </div>
         <div class="product-body">
           <h2>Reproduction de pièce</h2>
-          <p>Pièce cassée, introuvable ou obsolète ? Envoyez-nous un échantillon ou une photo, nous la reproduisons à l'identique.</p>
+          <p>Pièce cassée, introuvable ou obsolète ? Envoyez un échantillon ou une photo.</p>
           <ul class="product-specs">
             <li>Scan 3D inclus si nécessaire</li>
             <li>Métal ou plastique selon usage</li>
-            <li>Délai : devis sous 48 h</li>
+            <li>Devis sous 48 h</li>
           </ul>
           <div class="product-footer">
             <div class="product-price"><strong>Sur devis</strong></div>
-            <a href="devis.html" class="btn-ghost btn-buy">Demander →</a>
+            <a href="devis.html" class="btn-ghost">Demander →</a>
           </div>
         </div>
       </div>
 
-      <div class="product-card" data-cat="laser cadeau">
+      <div class="product-card" data-cat="laser cadeau"
+           data-id="gravure-objet" data-name="Gravure sur objet" data-price="12">
         <div class="product-img product-img-couteau">
           <span class="product-badge">Laser</span>
         </div>
         <div class="product-body">
           <h2>Gravure sur couteau / objet</h2>
-          <p>Gravure laser sur votre propre objet (couteau, briquet, montre, plaque…). Envoyez-nous votre objet ou votre visuel.</p>
+          <p>Gravure laser sur votre propre objet. Envoyez-nous votre objet ou votre visuel.</p>
           <ul class="product-specs">
             <li>Sur votre objet existant</li>
             <li>Texte · logo · motif</li>
@@ -202,29 +237,25 @@
           </ul>
           <div class="product-footer">
             <div class="product-price">À partir de <strong>12 €</strong></div>
-            <a href="STRIPE_PAYMENT_LINK_GRAVURE_OBJET" class="btn-primary btn-buy" target="_blank">Acheter →</a>
+            <button class="btn-primary btn-add-cart">+ Ajouter</button>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- CTA devis -->
     <div class="shop-cta">
-      <p>Votre projet ne correspond à aucun produit ci-dessus ?</p>
+      <p>Votre projet ne correspond à aucun produit ?</p>
       <a href="devis.html" class="btn-primary">Faire une demande sur mesure →</a>
     </div>
-
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
       <span class="logo">French Revolve</span>
       <p>Atelier de fabrication · Haute-Marne · France</p>
       <p class="footer-links">
         <a href="index.html#services">Services</a> ·
-        <a href="index.html#realisations">Réalisations</a> ·
         <a href="boutique.html">Boutique</a> ·
         <a href="devis.html">Devis</a> ·
         <a href="index.html#contact">Contact</a>
@@ -234,19 +265,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Filter buttons
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        document.querySelectorAll('.product-card').forEach(card => {
-          const cats = card.dataset.cat || '';
-          card.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
-        });
-      });
-    });
-  </script>
+  <script src="cart.js"></script>
 </body>
 </html>
