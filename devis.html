@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demande de devis — French Revolve</title>
+  <meta name="description" content="Demandez un devis gratuit pour votre projet de fabrication sur mesure : CNC, impression 3D, gravure laser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="boutique.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo">French Revolve</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#realisations">Réalisations</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="devis.html" class="active">Devis</a></li>
+      <li><a href="index.html#contact" class="btn-nav">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <p class="hero-label">Devis gratuit</p>
+      <h1>Votre projet sur mesure</h1>
+      <p class="page-sub">Décrivez votre projet, nous vous répondons sous 48 h avec un devis détaillé. Gratuit et sans engagement.</p>
+    </div>
+  </header>
+
+  <!-- DEVIS FORM -->
+  <main class="container devis-main">
+
+    <div class="devis-layout">
+
+      <!-- FORM -->
+      <div class="devis-form-section">
+        <form id="devis-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis — French Revolve" />
+
+          <div class="form-section-title">Vos coordonnées</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Prénom et nom *</label>
+              <input type="text" id="nom" name="nom" required placeholder="Jean Dupont" />
+            </div>
+            <div class="form-group">
+              <label for="entreprise">Entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" placeholder="Optionnel" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="vous@exemple.fr" />
+            </div>
+            <div class="form-group">
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" name="telephone" placeholder="06 00 00 00 00" />
+            </div>
+          </div>
+
+          <div class="form-section-title">Votre projet</div>
+          <div class="form-group">
+            <label for="service">Type de service *</label>
+            <select id="service" name="service" required>
+              <option value="">— Sélectionnez —</option>
+              <option>Usinage CNC (aluminium, acier, plastique...)</option>
+              <option>Impression 3D FDM</option>
+              <option>Impression 3D SLS (Sinterit)</option>
+              <option>Gravure laser</option>
+              <option>Modélisation 3D / Scan</option>
+              <option>Reproduction de pièce cassée ou introuvable</option>
+              <option>Plaque nominative / signalétique</option>
+              <option>Porte-clés ou cadeaux personnalisés</option>
+              <option>Autre</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantite">Quantité</label>
+              <input type="number" id="quantite" name="quantite" min="1" placeholder="1" />
+            </div>
+            <div class="form-group">
+              <label for="materiau">Matériau souhaité</label>
+              <input type="text" id="materiau" name="materiau" placeholder="Aluminium, PLA, acier..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dimensions">Dimensions approximatives</label>
+            <input type="text" id="dimensions" name="dimensions" placeholder="ex: 100 x 50 x 20 mm" />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description du projet *</label>
+            <textarea id="description" name="description" rows="5" required placeholder="Décrivez votre pièce, son utilisation, les contraintes techniques, le délai souhaité..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="fichier">Lien vers vos fichiers (STL, DXF, STEP, photo…)</label>
+            <input type="text" id="fichier" name="lien_fichier" placeholder="WeTransfer, Google Drive, Dropbox..." />
+            <span class="input-hint">Vous pouvez aussi nous envoyer vos fichiers par email après soumission.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget indicatif</label>
+            <select id="budget" name="budget">
+              <option value="">— Optionnel —</option>
+              <option>Moins de 50 €</option>
+              <option>50 – 150 €</option>
+              <option>150 – 500 €</option>
+              <option>500 – 2 000 €</option>
+              <option>Plus de 2 000 €</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full btn-submit">
+            Envoyer ma demande →
+          </button>
+          <p class="form-note">Réponse sous 48 h · Devis gratuit et sans engagement · contact@frenchrevolve.fr</p>
+        </form>
+      </div>
+
+      <!-- SIDEBAR INFO -->
+      <aside class="devis-aside">
+        <div class="aside-card">
+          <h3>Comment ça marche ?</h3>
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <strong>Décrivez votre projet</strong>
+                <p>Remplissez le formulaire avec le maximum de détails.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <strong>Devis sous 48 h</strong>
+                <p>Nous analysons votre demande et vous envoyons un devis détaillé par email.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <strong>Validation & fabrication</strong>
+                <p>Vous validez le devis, nous lançons la fabrication.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <strong>Livraison</strong>
+                <p>Votre pièce est expédiée ou disponible à l'atelier en Haute-Marne.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="aside-card aside-contact">
+          <h3>Une question rapide ?</h3>
+          <p>Contactez-nous directement :</p>
+          <a href="mailto:contact@frenchrevolve.fr" class="contact-link">contact@frenchrevolve.fr</a>
+          <p class="aside-note">Haute-Marne, France</p>
+        </div>
+
+        <div class="aside-card aside-services">
+          <h3>Nos capacités</h3>
+          <ul class="cap-list">
+            <li>
+              <span class="cap-tag">CNC</span>
+              Aluminium · Acier · Fibre de carbone
+            </li>
+            <li>
+              <span class="cap-tag">3D FDM</span>
+              PLA · PETG · ASA · TPU
+            </li>
+            <li>
+              <span class="cap-tag">3D SLS</span>
+              Nylon PA12 · Flexa
+            </li>
+            <li>
+              <span class="cap-tag">Laser</span>
+              Bois · Métal · Plastique · Cuir
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="logo">French Revolve</span>
+      <p>Atelier de fabrication · Haute-Marne · France</p>
+      <p class="footer-links">
+        <a href="index.html#services">Services</a> ·
+        <a href="index.html#realisations">Réalisations</a> ·
+        <a href="boutique.html">Boutique</a> ·
+        <a href="devis.html">Devis</a> ·
+        <a href="index.html#contact">Contact</a>
+      </p>
+      <p class="footer-copy">© 2025 French Revolve. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const form = document.getElementById('devis-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit');
+      const original = btn.textContent;
+      btn.textContent = 'Envoi en cours…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.innerHTML = `
+            <div class="success-msg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+              <h2>Demande envoyée !</h2>
+              <p>Nous avons bien reçu votre demande. Vous recevrez un devis à <strong>${document.getElementById('email').value}</strong> dans les 48 h.</p>
+              <a href="index.html" class="btn-ghost" style="margin-top:24px;display:inline-block">← Retour à l'accueil</a>
+            </div>`;
+        } else { throw new Error(); }
+      } catch {
+        btn.textContent = 'Erreur — réessayez';
+        btn.style.background = '#8b1a1a';
+        setTimeout(() => { btn.textContent = original; btn.disabled = false; btn.style.background = ''; }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>
