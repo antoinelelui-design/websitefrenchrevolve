@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>French Revolve — Fabrication sur mesure</title>
+  <meta name="description" content="Atelier de fabrication français spécialisé en usinage CNC, impression 3D, gravure laser et modélisation 3D. Basé en Haute-Marne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="logo">French Revolve</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#boutique">Boutique</a></li>
+      <li><a href="#contact" class="btn-nav">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-label">Atelier · Haute-Marne · France</p>
+      <h1>Fabrication<br /><em>sur mesure.</em></h1>
+      <p class="hero-sub">Usinage CNC, impression 3D, gravure laser, modélisation — nous fabriquons vos pièces, de l'idée à la livraison.</p>
+      <div class="hero-cta">
+        <a href="#boutique" class="btn-primary">Demander un devis</a>
+        <a href="#services" class="btn-ghost">Nos services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-grid">
+        <div class="hg-item hg-large">CNC</div>
+        <div class="hg-item">3D</div>
+        <div class="hg-item">Laser</div>
+        <div class="hg-item hg-large">Sur mesure</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Nos compétences</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Usinage CNC</h3>
+          <p>Fraisage et tournage de précision dans tous matériaux : aluminium, acier, fibre de carbone, bois, plastiques techniques.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Impression 3D</h3>
+          <p>FDM et SLS (Sinterit) pour des pièces fonctionnelles, prototypes ou séries. Matériaux hautes performances disponibles.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Gravure laser</h3>
+          <p>Gravure et découpe sur bois, métal, plastique, cuir. Personnalisation de pièces, plaques, cadeaux et objets en série.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <h3>Modélisation 3D</h3>
+          <p>Création de fichiers CAO sur mesure ou reproduction de pièces existantes. Scan 3D pour rétro-engineering.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3l2 2"/></svg>
+          </div>
+          <h3>Reproduction de pièces</h3>
+          <p>Pièce cassée, introuvable ou obsolète ? Nous la reproduisons à l'identique ou en amélioré, en métal ou plastique.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3>Cadeaux personnalisés</h3>
+          <p>Porte-clés, plaques nominatives, objets gravés… Petites séries possibles. Idéal particuliers et entreprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS -->
+  <section id="realisations" class="bg-light">
+    <div class="container">
+      <h2 class="section-title">Réalisations</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="CNC"></div>
+          <p>Chassis fibre de carbone</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="Aluminium"></div>
+          <p>Usinage aluminium</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="3D"></div>
+          <p>Impression 3D — pièce de voiture</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="Laser"></div>
+          <p>Plaque nominative personnalisée</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="Modélisation"></div>
+          <p>Modélisation modélisme sur mesure</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="Gravure"></div>
+          <p>Gravure sur couteau</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="Mécanique"></div>
+          <p>Tube admission sur mesure</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb" data-label="Cadeau"></div>
+          <p>Porte-clés entreprise</p>
+        </div>
+      </div>
+      <p class="gallery-note">→ Envoyez-nous vos photos de réalisations pour les afficher ici.</p>
+    </div>
+  </section>
+
+  <!-- BOUTIQUE / DEVIS -->
+  <section id="boutique">
+    <div class="container">
+      <h2 class="section-title">Boutique & Devis</h2>
+      <p class="section-sub">Faites fabriquer votre pièce sur mesure, en reproduction ou en série. Décrivez votre projet ci-dessous, nous vous répondons sous 48 h.</p>
+
+      <div class="boutique-grid">
+        <!-- Produits populaires -->
+        <div class="products">
+          <h3>Commandes fréquentes</h3>
+          <div class="product-list">
+            <div class="product-item" data-preselect="Pièce CNC aluminium sur mesure">
+              <div class="product-thumb product-cnc"></div>
+              <div class="product-info">
+                <strong>Pièce CNC sur mesure</strong>
+                <span>Aluminium · Acier · Plastique</span>
+              </div>
+              <button class="btn-order">Commander</button>
+            </div>
+            <div class="product-item" data-preselect="Impression 3D pièce fonctionnelle">
+              <div class="product-thumb product-3d"></div>
+              <div class="product-info">
+                <strong>Impression 3D</strong>
+                <span>FDM · SLS · Prototypage</span>
+              </div>
+              <button class="btn-order">Commander</button>
+            </div>
+            <div class="product-item" data-preselect="Gravure laser personnalisée">
+              <div class="product-thumb product-laser"></div>
+              <div class="product-info">
+                <strong>Gravure laser</strong>
+                <span>Bois · Métal · Cuir · Plastique</span>
+              </div>
+              <button class="btn-order">Commander</button>
+            </div>
+            <div class="product-item" data-preselect="Plaque nominative ou signalétique personnalisée">
+              <div class="product-thumb product-plaque"></div>
+              <div class="product-info">
+                <strong>Plaque personnalisée</strong>
+                <span>Maison · Entreprise · Cadeau</span>
+              </div>
+              <button class="btn-order">Commander</button>
+            </div>
+            <div class="product-item" data-preselect="Porte-clé personnalisé en petite série">
+              <div class="product-thumb product-portecle"></div>
+              <div class="product-info">
+                <strong>Porte-clés personnalisés</strong>
+                <span>Petites séries · Entreprises</span>
+              </div>
+              <button class="btn-order">Commander</button>
+            </div>
+            <div class="product-item" data-preselect="Reproduction d'une pièce cassée ou introuvable">
+              <div class="product-thumb product-repro"></div>
+              <div class="product-info">
+                <strong>Reproduction de pièce</strong>
+                <span>Cassée · Introuvable · Obsolète</span>
+              </div>
+              <button class="btn-order">Commander</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire devis -->
+        <div class="devis-form-wrap" id="devis-form-wrap">
+          <h3>Votre demande</h3>
+          <form id="devis-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis — French Revolve" />
+            <div class="form-group">
+              <label for="devis-nom">Nom / Entreprise *</label>
+              <input type="text" id="devis-nom" name="nom" required placeholder="Jean Dupont" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="devis-email">Email *</label>
+                <input type="email" id="devis-email" name="email" required placeholder="vous@exemple.fr" />
+              </div>
+              <div class="form-group">
+                <label for="devis-tel">Téléphone</label>
+                <input type="tel" id="devis-tel" name="telephone" placeholder="06 00 00 00 00" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="devis-service">Type de service *</label>
+              <select id="devis-service" name="service" required>
+                <option value="">— Choisissez —</option>
+                <option>Usinage CNC</option>
+                <option>Impression 3D</option>
+                <option>Gravure laser</option>
+                <option>Modélisation 3D / Scan</option>
+                <option>Reproduction de pièce</option>
+                <option>Plaque / Cadeau personnalisé</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="devis-desc">Description du projet *</label>
+              <textarea id="devis-desc" name="description" rows="4" required placeholder="Décrivez votre pièce, dimensions, matériau souhaité, quantité, délai..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="devis-fichier">Fichier (3MF, STL, DXF, photo…)</label>
+              <input type="text" id="devis-fichier" name="lien_fichier" placeholder="Lien WeTransfer, Drive ou Dropbox" />
+            </div>
+            <button type="submit" class="btn-primary btn-full">Envoyer ma demande →</button>
+            <p class="form-note">Réponse sous 48 h · Devis gratuit et sans engagement</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos" class="bg-dark">
+    <div class="container container-narrow">
+      <h2 class="section-title">L'atelier</h2>
+      <p class="about-text">French Revolve est un atelier de fabrication français basé en <strong>Haute-Marne</strong>, spécialisé dans la fabrication additive plastique, la gravure laser, l'usinage CNC, le scan et la modélisation 3D.</p>
+      <p class="about-text">Nous travaillons avec des particuliers, des artisans et des entreprises pour fabriquer des pièces uniques ou en petite série — du prototype à la livraison.</p>
+      <div class="about-stats">
+        <div class="stat"><strong>CNC</strong><span>Usinage précis</span></div>
+        <div class="stat"><strong>SLS</strong><span>Impression 3D pro</span></div>
+        <div class="stat"><strong>Laser</strong><span>Gravure & découpe</span></div>
+        <div class="stat"><strong>Sur mesure</strong><span>Toujours</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-light">
+    <div class="container container-narrow">
+      <h2 class="section-title">Nous contacter</h2>
+      <p class="section-sub">Une question ? Un projet à discuter ? Écrivez-nous directement.</p>
+      <form id="contact-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+        <input type="hidden" name="_subject" value="Message via site — French Revolve" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-nom">Nom *</label>
+            <input type="text" id="c-nom" name="nom" required placeholder="Jean Dupont" />
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email *</label>
+            <input type="email" id="c-email" name="email" required placeholder="vous@exemple.fr" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="c-message">Message *</label>
+          <textarea id="c-message" name="message" rows="5" required placeholder="Bonjour, je voudrais..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Envoyer →</button>
+      </form>
+      <div class="contact-info">
+        <a href="mailto:contact@frenchrevolve.fr">contact@frenchrevolve.fr</a>
+        <span>Haute-Marne, France</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="logo">French Revolve</span>
+      <p>Atelier de fabrication · Haute-Marne · France</p>
+      <p class="footer-links">
+        <a href="#services">Services</a> ·
+        <a href="#realisations">Réalisations</a> ·
+        <a href="#boutique">Boutique</a> ·
+        <a href="#contact">Contact</a>
+      </p>
+      <p class="footer-copy">© 2025 French Revolve. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
